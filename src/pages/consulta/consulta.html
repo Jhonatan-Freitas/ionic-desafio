@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>consulta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked >Estado</ion-label>
+      <ion-input type="text" autofocus [(ngModel)]="txtEstado" maxlength="2"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked >Cidade</ion-label>
+      <ion-input type="text" [(ngModel)]="txtCidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked >Rua</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="txtRua"></ion-input>
+    </ion-item>
+    <div padding>
+      <button (click)="getEndereco()" ion-button color="primary" block>Pesquisar</button>
+  </div>
+  </ion-list>
+  
+  <ion-list *ngFor="let item of itens">
+  <ion-list-header>
+    Endereço
+  </ion-list-header>
+  <ion-item>
+    <p>Cep: {{item.cep}}</p>
+    <p>Estado: {{item.uf}}</p>
+    <p>Cidade: {{item.localidade}}</p>
+    <p>Bairro: {{item.bairro}}</p>
+    <p>Rua: {{item.logradouro}}</p>
+    <p>IBGE: {{item.ibge}}</p>
+    <h3>{{fail}}</h3>
+    <button ion-button color="primary" block>Este é meu endereço</button>
+  </ion-item>
+</ion-list>
+</ion-content>
