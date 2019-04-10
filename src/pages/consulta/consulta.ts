@@ -31,6 +31,5 @@ export class ConsultaPage {
         console.log(error);
       }
     )
-    console.log(this.txtEstado);
 }
 }
