@@ -7,11 +7,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
 import { ConsultaPage } from '../pages/consulta/consulta';
 import { HttpClientModule } from '@angular/common/http';
+import { ConsultacepPage } from '../pages/consultacep/consultacep';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
     MyApp,
-    ConsultaPage
+    ConsultaPage,
+    ConsultacepPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ConsultaPage
+    ConsultaPage,
+    ConsultacepPage,
+    TabsPage
   ],
   providers: [
     StatusBar,

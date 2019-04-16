@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Buscar por CEP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked >CEP</ion-label>
+      <ion-input type="text" autofocus [(ngModel)]="txtCep" maxlength="8"></ion-input>
+    </ion-item>
+    </ion-list>
+    <div padding>
+      <button (click)="getEnderecoByCep()" ion-button color="primary" block>Pesquisar</button>
+  </div>
+  <ion-list *ngFor="let item of resultado">
+    <ion-list-header>
+      Endereço
+    </ion-list-header>
+    <ion-item>
+      <p>Cep: {{item.cep}}</p>
+      <p>Estado: {{item.uf}}</p>
+      <p>Cidade: {{item.localidade}}</p>
+      <p>Bairro: {{item.bairro}}</p>
+      <p>Rua: {{item.logradouro}}</p>
+      <p>IBGE: {{item.ibge}}</p>
+      <h3>{{fail}}</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>

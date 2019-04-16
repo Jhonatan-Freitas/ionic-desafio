@@ -10,4 +10,7 @@ export class ConfigProvider {
     return this.http.get("https://viacep.com.br/ws/"+ uf + "/"+localidade+"/"+logradouro+"/json/");
 }
 
+  getLocationByCep(cep:string){
+    return this.http.get("https://viacep.com.br/ws/"+ cep +"/json/");
+  }
 }
